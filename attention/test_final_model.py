@@ -133,6 +133,5 @@ if __name__ == '__main__':
             cv2.imwrite(os.path.join(save_path, 'mask', '%s_ground_turth_mask.jpg' % image_name[0]), ground_truth_mask_np)
             cv2.imwrite(os.path.join(save_path, 'mask', '%s_estimate_mask.jpg' % image_name[0]), estimate_mask_np)
 
-    print('total forward time is %f seconds of %d samples.' % (total_forward_time, index))
-    print('average iou is %f' % (total_iou / index))
-    # log(log_path, log_info)
+        print('total forward time is %f seconds of %d samples.' % (total_forward_time, index))
+        print('average iou is %f' % (total_iou / index))

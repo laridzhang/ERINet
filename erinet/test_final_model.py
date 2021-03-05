@@ -111,10 +111,4 @@ if __name__ == '__main__':
             # save image
             cv2.imwrite(os.path.join(save_path, 'image_class_map', '%s_%s_estimate_image_class_map.jpg' % (image_name[0], another_image_name[0])), image_class_map)
 
-            # display wrong result
-            if np.argmax(ground_truth_label.data.cpu().numpy(), axis=1)[0] != np.argmax(estimate_label.data.cpu().numpy(), axis=1)[0]:
-                cv2.imshow('%s_%s' % (image_name[0], another_image_name[0]), image_class_map)
-                cv2.waitKey()
-
-    print('total forward time is %f seconds of %d samples.' % (total_forward_time, index))
-    # log(log_path, log_info)
+        print('total forward time is %f seconds of %d samples.' % (total_forward_time, index))
